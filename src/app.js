@@ -2,12 +2,12 @@ const express = require("express");
 
 const app = express();
 
-app.get("/", (req, res)=>{
-    res.send("hello from gaurav");
+app.get("/user", (req, res)=>{
+    res.send("Get Request");
 })
 
-app.get("/test", (req , res)=>{
-    res.send("hello from start");
+app.post("/user", (req , res)=>{
+    res.send("Post Request");
 })
 
 app.listen(7777 , ()=>{
