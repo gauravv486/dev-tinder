@@ -1,15 +1,18 @@
-const express = require("express");
-
+import express from "express";
 const app = express();
 
-app.get("/user", (req, res)=>{
-    res.send("Get Request");
+import { isAdminAuth } from "./middlewares/auth.js"
+
+app.use("/admin", isAdminAuth);
+
+app.get("/admin/getAllData", (req, res) => {
+    res.send("All DATA");
 })
 
-app.post("/user", (req , res)=>{
-    res.send("Post Request");
+app.get("/admin/deleteData", (req, res) => {
+    res.send("DATA DELETED");
 })
 
-app.listen(7777 , ()=>{
-    console.log("Server running sucssesfully");
+app.listen(7777, () => {
+    console.log("Server is running")
 })

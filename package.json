@@ -8,7 +8,7 @@
   ],
   "license": "ISC",
   "author": "Gaurav Singh",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start" : "node src/app.js" ,
